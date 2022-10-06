@@ -1,9 +1,9 @@
 import React from "react";
 
-const Titulo = ({alumno, matricula}) =>{
+const Titulo = ({alumno, matricula, color}) =>{
     return(
         <>
-            <h1 className='titulo' style={{color: 'blue'}}>Hola {alumno} con ID {matricula}</h1>
+            <h1 className='titulo' style={{color : color}}>Hola {alumno} con ID {matricula}</h1>
         </>
     )
 };

@@ -3,18 +3,18 @@ import Titulo from "./Titulo";
 
 //-----------Creacion de funcion tipo flecha------------//
 const Alumno = () => {
-    const apellido = " Cova Martinez";
+    
     const alumnos = ['Aldo', 'Alfredo', 'Dimas'];
     return(
     <>
-        <Titulo alumno = "Yoli" matricula = "23524"/>
-        <h1>Apellido: {apellido}</h1>
-        <h2>Lista de amigos: </h2>
-        <lu>
+        <h1 className="titulo" style={{color:'magenta'}}>BIENVENIDO</h1>
+        <Titulo alumno = "Aldo" matricula = "186223" color="blue"/>
+        <h2 className="lista" style={{color: 'red'}}>Lista de alumnos:</h2>
+        <ul>
             {alumnos.map((nombre, i) => {
-            return <li key={i}>{nombre}</li>;
+            return <Titulo alumno={nombre} matricula={i} color="purple"/>;
             })}
-        </lu>
+        </ul>
     </>
     )
 };  

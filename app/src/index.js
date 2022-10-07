@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Alumno from "./comp/Alumno";
 
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 //------------Variables-----------------//

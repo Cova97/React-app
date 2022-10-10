@@ -1,5 +1,6 @@
 import React from "react";
 
+//---------Creacion de funcion tipo flecha---------//
 const Titulo = ({alumno, matricula, color}) =>{
     return(
         <>
@@ -7,5 +8,5 @@ const Titulo = ({alumno, matricula, color}) =>{
         </>
     )
 };
-
 export default Titulo;
+//------------------------------------------------//

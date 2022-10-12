@@ -1,12 +1,13 @@
 import React, {useState} from 'react';
 import ReactDOM from 'react-dom/client';
 import Alumno from "./comp/Alumno";
+import FormularioLogin from './comp/Formulario';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 //------------Main---------------//
 const Jsx = () => {
-  const [cuenta, cambiarSecion] = useState(true);
+  const [cuenta, cambiarSecion] = useState(false);
   const [cont, cambiarValor] = useState(0);
   return (
     <>
@@ -22,8 +23,9 @@ const Jsx = () => {
       </>
     ) : (
       <>
-        <h1>Error</h1>
-        <button onClick={() => cambiarSecion(true)}>Iniciar sesión</button>
+        <h1>Inicia sesión</h1>
+        <FormularioLogin cambiarSecion={cambiarSecion}/>
+        
       </>
     )}
   </>

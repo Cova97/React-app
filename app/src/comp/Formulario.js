@@ -1,8 +1,10 @@
 import React, {useState} from "react";
+import Registrar from "./Registrar";
 
 const FormularioLogin = (props) => {
     const[user, setUser] = useState("");
     const[password, setPassword] = useState("");
+    const[registrar, cambiarRegistrar] = useState("");
 
     const onChange = (e) => {
         console.log(e.target.name);
@@ -18,18 +20,16 @@ const FormularioLogin = (props) => {
         console.log(e);
         e.preventDefault();
         if(user === "aldo" && password === "123"){
-            alert("Nice");
+            alert("Bienvenido");
             props.cambiarSecion(true);
         }
         else{
-            alert("Nel");
+            alert("Usuario o contraseña errorneas");
         }
     }
 
     return (
         <form action="" onSubmit={onSubmit}>
-            <p>Usuario {user}</p>
-            <p>password {password}</p>
             <div>
                 <label htmlFor="user">Usuario</label>
                 <input 
@@ -51,7 +51,9 @@ const FormularioLogin = (props) => {
                 ></input>
             </div>
             <button>Iniciar secion</button>
+            <button onClick={() => cambiarRegistrar(cambiarRegistrar)}>Registrarse</button>
         </form>
+        
     );
 }
 
